@@ -1,0 +1,86 @@
+<!---
+ Copy and paste this for each new day and update date/activities (update month as needed)
+###########################################
+<h2>DD/01/26</h2>
+================================================================================================
+<h3>Evening:</h3>
+<p>
+</p>
+<p>
+</p>
+================================================================================================
+<h3>Afternoon:</h3>
+<p> 
+</p>
+<p>
+</p>
+================================================================================================
+<h3>Morning:</h3>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+###########################################
+-->
+
+###########################################
+<h2>23/01/26</h2>
+================================================================================================
+<h3>Evening:</h3>
+<p>
+</p>
+<p>
+</p>
+================================================================================================
+<h3>Afternoon:</h3>
+<p> 
+</p>
+<p>
+</p>
+================================================================================================
+<h3>Morning:</h3>
+<p>
+Pasting this from private repo- 
+I'm not sure if creating a new branch or a new file altogether is what I actually want so just jumping in with a new branch.
+	This is first update in almost 2 years. Tech updates for AI agentic courses.
+	Need to get this workflow for journaling down as a first step so was looking for atom, but its no longer maintained.
+	Then it said maybe github desktop with notepad++ could work and then it said git command line with notepad++ is even better.
+	So lets see. Maybe just editing direct in here could be quickest fix for now, but I'll give this a few minutes.
+	So first is to download git. which I need to do anyways.
+</p>
+<p>
+</p>
+<p>
+</p>
+###########################################
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div id="Rules">
+	<h2>Rules</h2>
+	<ol>
+		<li>Print upon completion of every 7 days</li>
+		<li>Find ways to improve clarity and reduce wasteful living</li>
+		<li>Always remember to do what helps the most people, as that
+			will provide a proportional amount of success</li>
+	</ol>
+</div>
+
+<hr>
+
+<h2>Bottom</h2>
+<div id="Bottom">
+	<span class="name">Bottom</span> section.
+</div>
