@@ -77,6 +77,59 @@ See a modified Jan26 file.
 git add . or git add Jan26
 git commit -m "from repo to local to repo"
 git push origin main.
+I'm going to paste what Claude showed me for git go tos-
+####
+Basic Workflow:
+1. Navigate to your project folder:
+
+bash
+cd path/to/your/project
+2. Initialize Git (if new project):
+
+bash
+git init
+git remote add origin https://github.com/username/repository.git
+3. Daily workflow:
+
+bash
+# Edit files in Notepad++, save them
+
+# Check what changed
+git status
+
+# See specific changes
+git diff filename.txt
+
+# Stage files for commit
+git add filename.txt
+# or stage all changes
+git add .
+
+# Commit with message
+git commit -m "Your commit message"
+
+# Push to GitHub
+git push origin main
+Useful Git Commands:
+bash
+# Check current status
+git status
+
+# View commit history
+git log --oneline
+
+# Pull latest changes
+git pull
+
+# Create and switch to new branch
+git checkout -b new-feature
+
+# Switch branches
+git checkout main
+
+# See what files are tracked
+git ls-files
+####
 </p>
 <p>
 </p>
