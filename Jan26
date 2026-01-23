@@ -72,6 +72,11 @@ yet so I tried git pull but it had no tracking information for the current branc
 git branch --set-upstream-to=origin/main main
 and then git pull worked and then git push origin main worked.
 and now I will test pushing from here to repo.
+Checking command terminal with git status.
+See a modified Jan26 file.
+git add . or git add Jan26
+git commit -m "from repo to local to repo"
+git push origin main.
 </p>
 <p>
 </p>
