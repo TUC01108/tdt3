@@ -65,6 +65,13 @@ Ok so i setup git inside my desktop notes00 folder and connected to this repo. n
 have to edit from inside github.
 </p>
 <p>
+Okay now I am editing from inside notepad++. WAHOO.
+Pretty cool.
+I had to update the git config --global user.email and user.name and then I couldnt push because I didnt pull
+yet so I tried git pull but it had no tracking information for the current branch so I did
+git branch --set-upstream-to=origin/main main
+and then git pull worked and then git push origin main worked.
+and now I will test pushing from here to repo.
 </p>
 <p>
 </p>
