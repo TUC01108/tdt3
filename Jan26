@@ -49,6 +49,19 @@ I'm not sure if creating a new branch or a new file altogether is what I actuall
 	Then it said maybe github desktop with notepad++ could work and then it said git command line with notepad++ is even better.
 	So lets see. Maybe just editing direct in here could be quickest fix for now, but I'll give this a few minutes.
 	So first is to download git. which I need to do anyways.
+Okay so downloading git from here- https://git-scm.com/install/
+Downloaded 2/52/0 arm 64 to C:\Program Files\Git
+It is crazy how just setting up GIT has so many prompts. Im using Claude Sonnet 4 through playground to navigate.
+One thing that stands out is credental helper and all these options that probably make life easier but reduce privacy.
+Github being maintained by Microsoft who owns GitHub. Why do we trust these companies with our keys?
+Anyways I choose convenience for now. Ignorance is bliss.
+Installing now.
+Done.
+Launched gitbash... I think
+actually just reopened cmd terminal with adm access and entered this.
+git config --global core.editor "notepad++.exe -multiInst -notabbar -nosession -noPlugin"
+navigated to my project folder notes00
+
 </p>
 <p>
 </p>
