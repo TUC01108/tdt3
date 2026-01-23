@@ -61,7 +61,8 @@ Launched gitbash... I think
 actually just reopened cmd terminal with adm access and entered this.
 git config --global core.editor "notepad++.exe -multiInst -notabbar -nosession -noPlugin"
 navigated to my project folder notes00
-
+Ok so i setup git inside my desktop notes00 folder and connected to this repo. now to get this file onto local so I dont
+have to edit from inside github.
 </p>
 <p>
 </p>
