@@ -42,7 +42,16 @@
 <h3>Morning:</h3>
 <p>
 Doing git clone to clone the repo for LLM course onto local.
-
+Day 1. continued. ollama run gemma3:270m
+ctrl + d. ends the convo
+trying phi3 from microsoft now.
+ollama run phi3
+now we are trying ollama run gpt-oss
+20 billion param model
+its a big one
+its really churning with this one.
+i killed the response because so slow.
+check on gpu/ tpu if it can handle these models and if this size is necessary to continue.
 </p>
 <p>
 </p>
