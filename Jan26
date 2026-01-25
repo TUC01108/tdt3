@@ -43,6 +43,15 @@
 <p>
 Trying out a gobal alias change in git to combine add and commit-
 git config --global alias.ac "!f() { git add . && git commit -m \"$@\"; }; f"
+now i just type-
+git ac "message"
+I think this can be better when adding all.
+ooo and this one too-
+alias gac='git add . && git commit -m'
+to be used like
+gac "message"
+that one was just for shell not for windows. so git ac "message" is best we can do.
+
 
 </p>
 <p>
