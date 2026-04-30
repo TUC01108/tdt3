@@ -2,7 +2,7 @@ technical
 <!---
  Copy and paste this for each new day and update date/activities (update month as needed)
 ###########################################
-<h2>DD/01/26</h2>
+<h2>DD/04/26</h2>
 ================================================================================================
 <h3>Evening:</h3>
 <p>
@@ -26,6 +26,30 @@ technical
 ###########################################
 -->
 ###########################################
+###########################################
+<h2>29/04/26</h2>
+================================================================================================
+<h3>Evening:</h3>
+<p>
+At Ellison waiting for a bird.
+</p>
+<p>
+</p>
+================================================================================================
+<h3>Afternoon:</h3>
+<p> 
+</p>
+<p>
+</p>
+================================================================================================
+<h3>Morning:</h3>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+###########################################
 <h2>29/01/26</h2>
 ================================================================================================
 <h3>Evening:</h3>
@@ -43,6 +67,12 @@ technical
 <h3>Morning:</h3>
 <p>
 What is next?
+moved the repo to the projects folder. simple. but couldnt do from just cmd line with mv
+now download cursor from cursor.com
+can open cursor from command line with cursor. actually nothing happens when i click install for that.
+oh well.
+
+
 </p>
 <p>
 </p>
