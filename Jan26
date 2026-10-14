@@ -45,6 +45,46 @@ technical
 <p>https://leetcode.com/problemset/
 and it begins
 
+
+class Solution:
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i,j]
+        return []
+
+it says I should write the faster version... here I'll try:
+# loop through once and keep a dictionary of each we've seen and see if target - num is in it.
+        myDict = {}
+        for i in range(len(nums)):
+            if target - nums[i] in myDict:
+                return [myDict[target - nums[i]],i]
+            else:
+                # current number as key and i as value
+                myDict[nums[i]] = i
+that took a bit of back and forth understanding key and value for dictionary
+it says to try this for next time- One tip for later: for i, num in enumerate(nums): gives you the index and the value together, which makes code like this easier to read.
+myDict = {}
+        for i, num in enumerate(nums):
+            if target - num in myDict:
+                return [myDict[target - num],i]
+            else:
+                # current number as key and i as value
+                myDict[num] = i
+this one feels clean..
+coding is definitely all about function and style.
+function if you can land the plane then great.. if you cant land the plane then doesnt matter how cool you crash it.
+land the plane and make it look smooth. that's coding.
+myDict = {}
+for i, num in enumerate(nums):
+	if target - num in myDict:
+		return [myDict[target - num], i]
+	else:
+		myDict[num] = i
+		
+wrote from memory with a few back and forths.. lets see if it can stick in my memory somehow.
+
 </p>
 <p>
 </p>
