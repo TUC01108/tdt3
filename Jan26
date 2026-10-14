@@ -85,8 +85,50 @@ for i, num in enumerate(nums):
 		
 wrote from memory with a few back and forths.. lets see if it can stick in my memory somehow.
 
+myDict = {}
+for i, num in enumerate(nums):
+	if target - num in myDict:
+		# return [key in dictionary that equals target - num, and current index
+		return [myDict[target - num], i]
+	else:
+	# save the current num as key with value as current index
+		myDict[num] = i
+		
+myDict = {}
+for i, num in enumerate(nums):
+	if target - num in myDict:
+		return [myDict[target - num], i]
+	else:
+		myDict[num] = i
 </p>
 <p>
+continuing with buy stocks problem in leetcode.
+This is what i came up with but it has flaws.
+maxProfit = 0
+for i in range(len(prices)):
+	if prices.index(max(prices)) > prices.index(min(prices)):
+		maxProfit = max(prices) - min(prices)
+	else:
+		prices.remove(max(prices))
+return maxProfit
+		
+BOT says to start with: 
+capturing lowest value we saw so far
+best profit so far
+and to always ask at each price:
+is this a new low?
+and if I sold today would I beat my best profit?
+
+rewriting with that in mind.
+
+lowestValue = float('inf')
+bestProfit = 0
+for i in range(len(prices)):
+	if lowestValue > prices[i]:
+		lowestValue = prices[i]
+	if bestProfit < prices[i] - lowestValue:
+		bestProfit = prices[i] - lowestValue
+return bestProfit
 </p>
 <p>
 </p>
