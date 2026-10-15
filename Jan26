@@ -81,6 +81,23 @@ for i in range(len(strs[0])):
 return strs[0]
 
 took a lot of back and forth to understand. few python fun things here. this stuff is cool.
+
+reverse words in string
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        return ' '.join(s.split()[::-1])
+		
+want to understand this clearly.
+
+Take s = "  the sky  is blue " as an example:
+
+s.split() with no arguments splits on any whitespace and throws away the extra spaces, including leading, trailing, and doubled ones. That gives you ['the', 'sky', 'is', 'blue'].
+[::-1] is a slice written as [start:stop:step]. Leaving start and stop empty means the whole list, and a step of -1 means walk it backward. That gives you ['blue', 'is', 'sky', 'the'].
+' '.join(...) glues the items in a list into one string, putting the string before .join, a single space here, between each one. That gives you "blue is sky the".
+
+I love the way BOT explains things to me. now to summary for today and yesterday in one go.
+
+
 </p>
 <p>
 </p>
