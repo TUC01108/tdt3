@@ -71,6 +71,16 @@ go through string chracters for word t and put 0 for value if new or minus 1 if 
 go through dictionary values and if value is not 0 return False
 else returh True
 
+for longest prefix-
+
+for i in range(len(strs[0])):
+	ch = strs[0][i]
+	for word in strs:
+		if len(word) <= i or word[i] != ch:
+			return strs[0][:i]
+return strs[0]
+
+took a lot of back and forth to understand. few python fun things here. this stuff is cool.
 </p>
 <p>
 </p>
