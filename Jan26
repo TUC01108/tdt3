@@ -27,7 +27,37 @@ technical
 -->
 ###########################################
 ###########################################
-<h2>DD/10/26</h2>
+<h2>15/10/26</h2>
+================================================================================================
+<h3>Evening:</h3>
+<p>
+</p>
+<p>
+</p>
+================================================================================================
+<h3>Afternoon:</h3>
+<p> 
+</p>
+<p>
+</p>
+================================================================================================
+<h3>Morning:</h3>
+<p>
+STRINGS TODAY and the refresher in the morning went well as this is how i answered-
+we use hash map because it reduces time complexity to O(1) and memory to O(n) vs time complexity of O(n).
+
+you track lowestPrice and bestProfit.
+
+slow marks the location of the zero that has not been swapped to the end yet. and [1,0] matters because we need to check for the edge case of is slow != i.
+
+</p>
+<p>
+</p>
+<p>
+</p>
+###########################################
+###########################################
+<h2>14/10/26</h2>
 ================================================================================================
 <h3>Evening:</h3>
 <p>
