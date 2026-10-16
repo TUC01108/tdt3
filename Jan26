@@ -27,6 +27,97 @@ technical
 -->
 ###########################################
 ###########################################
+<h2>16/10/26</h2>
+================================================================================================
+<h3>Evening:</h3>
+<p>
+</p>
+<p>
+</p>
+================================================================================================
+<h3>Afternoon:</h3>
+<p> 
+</p>
+<p>
+</p>
+================================================================================================
+<h3>Morning:</h3>
+<p>
+#two sum, buy stock low sell high, move zeroes, anagram, LCP, reverse words in string
+#two sum
+create dictionary
+start loop introducing i, and num in enumerate(nums)
+check if target - num is in dictionary
+if it is return the bracketed [] of comma separated dictionary value of key that equals target - num and i
+or if not save the current num as key of dictionary and i as value
+
+going to copy and paste this below and try to write the code-
+#two sum
+##create dictionary
+my_dict = {}
+##start loop introducing i, and num in enumerate(nums)
+for i, num in enumerate(nums):
+##check if target - num is in dictionary
+	if target - num in my_dict:
+##if it is return the bracketed [] of comma separated dictionary value of key that equals target - num and i
+		return [my_dict[target - num],i]
+##or if not save the current num as key of dictionary and i as value
+	my_dict[num] = i
+	
+# stocks
+lowestPrice = float('inf')
+bestProfit = 0
+for i in range(len(prices)):
+	if lowestPrice > prices[i]:
+		lowestPrice = prices[i]
+	if bestProfit < prices[i] - lowestPrice:
+		bestProfit = prices[i] - lowestPrice
+return bestProfit
+
+# move zeroes
+slow = 0
+for i in range(len(nums)):
+	if nums[i] != 0:
+		# change nums indexed value to be non-zero
+		nums[slow] = nums[i]
+		# if slow value doesnt equal current index then change current indexed value to zero (finish swap)
+		if slow != i:
+			nums[i] = 0
+		slow += 1
+		
+#anagrams slow is-
+return sorted(s) == sorted(t)	
+#faster REMEMBER 3 LOOPS ch, ch, values and .values()-
+my_dict = {}
+for ch in s:
+	my_dict[ch] = my_dict.get(ch,0)+1
+for ch in t:
+	my_dict[ch] = my_dict.get(ch,0)-1
+for values in my_dict.values():
+	if values != 0:
+		return False
+return True
+	
+#LCP 
+#REMEMBER 2 LOOPS & 6 lines/ 4lenwo wi!ch return st0:i
+for i in range(len(strs[0])):
+	ch = strs[0][i]
+	for word in strs:
+		if len(word) <= i or word[i] != ch:
+			return strs[0][:i]
+#return full word if makes it through all checks
+return strs[0]
+
+#reverse words
+return ' '.join(s.split()[::-1])
+	
+</p>
+<p>
+</p>
+<p>
+</p>
+###########################################
+###########################################
 <h2>15/10/26</h2>
 ================================================================================================
 <h3>Evening:</h3>
