@@ -120,6 +120,33 @@ from memory with a bit of back and forth..
 
 </p>
 <p>
+#twosum
+my_dict = {}
+for i, num in enumerate(nums):
+	if target - num in my_dict:
+		return [my_dict[target - num],i]
+	else:
+		# save current number as key and i as value
+		my_dict[num] = i
+		
+#buy stock low sell high
+lowestValue = float('inf')
+bestProfit = 0
+for i in range(len(prices)):
+	if lowestValue > prices[i]:
+		lowestValue = prices[i]
+	if bestProfit < prices[i] - lowestValue:
+		bestProfit = prices[i] - lowestValue
+return bestProfit
+
+#move zeroes
+slow = 0
+for i in range(len(nums)):
+	if nums[i] != 0:
+		nums[slow] = nums[i]
+		if slow != i:
+			nums[i] = 0
+		slow += 1
 </p>
 <p>
 </p>
