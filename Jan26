@@ -97,6 +97,26 @@ s.split() with no arguments splits on any whitespace and throws away the extra s
 
 I love the way BOT explains things to me. now to summary for today and yesterday in one go.
 
+my_dict = {}
+for ch in s:
+	my_dict[ch] = my_dict.get(ch,0)+1
+for ch in t:
+	my_dict[ch] = my_dict.get(ch,0)-1
+for val in my_dict.values():
+	if val != 0:
+		return False
+return True
+
+for i in range(len(strs[0])):
+	ch = strs[0][i]
+	for word in strs:
+		if len(word) <= i or word[i] != ch:
+			return strs[0][:i] 
+return strs[0]
+
+return ' '.join(s.split()[::-1])
+
+from memory with a bit of back and forth..
 
 </p>
 <p>
