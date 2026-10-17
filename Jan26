@@ -125,6 +125,24 @@ return list(my_dict.values())
 O (n * klogk)
 where k is the length of the longest word
 
+#top k frequent elements
+my_dict = {}
+for num in nums:
+	my_dict[num] = my_dict.get(num, 0) + 1
+return sorted(my_dict, key=my_dict.get, reverse=True)[:k]
+
+my_dict = {}
+for num in nums:
+	my_dict[num] = my_dict.get(num, 0) + 1
+buckets = [[] for _ in range(len(nums) + 1)]
+result = []
+for num, count in my_dict.items():
+	buckets[count].append(num)
+for i in range(len(buckets) - 1, 0, -1):
+	for num in buckets[i]:
+		result.append(num)
+		if len(result) == k:
+			return result
 </p>
 <p>
 </p>
