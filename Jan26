@@ -106,6 +106,29 @@ class Solution:
                         l += 1
         return result
 O(n^2) time
+
+container with most water IM REALLY PROUD OF THIS ONE> MAYBE ITS EASY/MEDIUM but i did it mostly on own.
+class Solution:
+    def maxArea(self, height: list[int]) -> int:
+        l = 0
+        r = len(height) -1
+        best = 0
+        while l < r:
+            low = 0
+            width = abs(l - r)
+            if height[l] < height[r]:
+                low = height[l]
+            else:
+                low = height[r]
+            if best < (low * width):
+                best = (low * width)
+            if height[l] < height[r]:
+                l += 1
+            else:
+                r -= 1
+        return best
+        
+THESE MOMENTS MAKE US NOT FEEL SO DUMB AND MAYBE WE CAN DO SOMETHING REAL
 </p>
 <p>
 </p>
