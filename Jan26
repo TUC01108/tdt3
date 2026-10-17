@@ -44,6 +44,28 @@ technical
 <h3>Morning:</h3>
 <p>
 TODAY-
+Next up is Contains Duplicate II. Given nums and k, return True if two equal values sit at indices i 
+and j where abs(i - j) <= k. Here's your first nudge: you solved Two Sum with a dict that maps each value to something. What should this dict map each value to?
+my_dict = {}
+        for i, num in enumerate(nums):
+            if num in my_dict:
+                if i - my_dict[num] <= k:
+                    return True
+            my_dict[num] = i
+        return False 
+so it sort of wrote itself.. need to sit with this one and see if I'm getting better or just compied the help i was getting.
+
+Next up is Valid Palindrome. Here's the first nudge: one pointer at each end, moving toward the middle. 
+What do you do with characters that aren't letters or digits?
+
+return ''.join(filter(str.isalpha, s)).lower() == ''.join(filter(str.isalpha, s)).lower()[::-1]
+
+just gotta memorize some python stuff
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        return ''.join(filter(str.isalnum, s)).lower() == ''.join(filter(str.isalnum, s)).lower()[::-1]
+		
+#one above removed the numbers which isnt right. isalnum is better
 
 </p>
 <p>
