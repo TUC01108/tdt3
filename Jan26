@@ -64,6 +64,29 @@ while l < r:
 	l += 1
 	r -= 1
 return True
+
+#group anagrams
+# ["eat","tea","tan","ate","nat","bat"]
+my_dict = {}
+for word in strs:
+	key = ''.join(sorted(word))
+	#checking if sorted word matches any key in dictionary
+	if key not in my_dict:
+		# if it is not then add it to that dictionary key's list
+		my_dict[key] = []
+	my_dict[key].append(word)
+return list(my_dict.values())
+
+OKAY REALLY STRUGGLED HERE.. DONT JUMP INTO CODE.. DONT JUMP INTO CODE
+first now what we are initializing and what we are returning. what type of loops and why
+for this one
+hash map to save sorted words as keys
+loop word in words
+setup key
+check if key is not in dictionary
+setup key inside dictionary if not
+if key is in dictionary append the word to it
+return the list of dictionary values
 	
 </p>
 <p>
