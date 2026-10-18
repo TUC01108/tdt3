@@ -127,6 +127,18 @@ class Solution:
                 
 I NEED HELP UNDERSTANDING THIS ONE FOR SURE
 
+# SO THIS IS AN EXPAND AND SQUEEZE ALGO LIKE A WORM MOVING / seen.remove(s[l]) and seen.add(s[r])
+#left edge of window set with l = 0
+#seen = set() is the chars currently inside the window
+#longestSub = 0 is the best size so far
+#for loop of r in range len s so the right edge moves one step each pass
+# while loop inside of s[r] in seen so we check if the new char is already in the window
+#seen.remove(s[l]) kick the leftmost char out of seen. SQUEEZE THE LEFT EDGE in
+# l += 1 move the left edge right SQUEEZE THE LEFT EDGE
+# outside the while 
+#tempSub > longestSub and longestSub = tempSub is obvious to find best size so far
+# seen.add(s[r]) EXPAND window to the right. 
+
 </p>
 <p>
 </p>
