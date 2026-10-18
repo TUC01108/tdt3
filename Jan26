@@ -44,6 +44,27 @@ technical
 <h3>Morning:</h3>
 <p>
 LETS GO
+write these 2 from memory-
+Group anagrams, valid palindrome
+
+#valid palindrome
+#lets say we have sentence  "I ran Nari"
+#two pointers. start with l on s[0] and r on s[len[s]-1] while l < r and make sure s[l] and s[r] equal eachother if not return False
+l = 0
+r = len(s)-1
+while l < r:
+	if not s[l].isalnum():
+		l += 1
+		continue
+	if not s[r].isalnum():
+		r -= 1
+		continue
+	if s[l].lower() != s[r].lower():
+		return False
+	l += 1
+	r -= 1
+return True
+	
 </p>
 <p>
 </p>
