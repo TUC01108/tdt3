@@ -87,7 +87,46 @@ check if key is not in dictionary
 setup key inside dictionary if not
 if key is in dictionary append the word to it
 return the list of dictionary values
-	
+
+longest substring without repeating characters
+i = 0 in range(8):
+	r = 1
+	while 1 <= 7:
+		if a != b:
+			longestSub = 2
+			r = 2
+			continue
+	while 2 <= 7:
+		if a != c:
+			longestSub = 3
+			r = 3
+			continue
+	while 3 <= 7:
+		if a != a:
+		break
+i = 1 in range(8):
+	r = 2
+	while 2 <= 7:
+		if b != c:
+			longestSub = 2
+nah i needed help	
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        l = 0
+        seen = set()
+        longestSub = 0
+        for r in range(len(s)):
+            while s[r] in seen:
+                seen.remove(s[l])
+                l += 1
+            tempSub = r - l + 1
+            if tempSub > longestSub:
+                longestSub = tempSub
+            seen.add(s[r])
+        return longestSub
+                
+I NEED HELP UNDERSTANDING THIS ONE FOR SURE
+
 </p>
 <p>
 </p>
