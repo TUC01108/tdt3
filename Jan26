@@ -139,6 +139,19 @@ I NEED HELP UNDERSTANDING THIS ONE FOR SURE
 #tempSub > longestSub and longestSub = tempSub is obvious to find best size so far
 # seen.add(s[r]) EXPAND window to the right. 
 
+Minimum Size Subarray Sum-
+class Solution:
+    def minSubArrayLen(self, target: int, nums: list[int]) -> int:
+        l = 0
+        minArrayLen = float('inf')
+        total = 0
+        for r in range(len(nums)):
+            total+= nums[r]
+            while total >= target:
+                minArrayLen = min(minArrayLen,r-l+1)
+                total -= nums[l]
+                l += 1
+        return 0 if minArrayLen == float('inf') else minArrayLen
 </p>
 <p>
 </p>
