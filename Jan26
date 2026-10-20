@@ -31,6 +31,8 @@ technical
 ================================================================================================
 <h3>Evening:</h3>
 <p>
+I'm going to try to use the problem guide to answer these 2 tonight.
+
 </p>
 <p>
 </p>
@@ -54,19 +56,17 @@ I WAS MISSING= key= before the middle value in sorted.
 </p>
 <p>
 Step 1: What's the input, and what am I returning? (a number, True or False, a list, the input changed in place)
-
 Step 2: Which clue word is in the problem?
 
-If the problem says...	Pattern
-"pair that sums to", "seen before", "count", "group by"	Hash map
-sorted array, "palindrome", "pair from both ends"	Two pointers, opposite ends
-"move or remove in place"	Two pointers, slow and fast
-"longest or shortest substring or subarray" with a rule	Sliding window
-"max profit", "best so far"	Single pass, tracking a running best
-"top k", "most frequent"	Count dict, then sort or heap
+If the problem says...										Pattern
+"pair that sums to", "seen before", "count", "group by"		Hash map
+sorted array, "palindrome", "pair from both ends"			Two pointers, opposite ends
+"move or remove in place"									Two pointers, slow and fast
+"longest or shortest substring or subarray" with a rule		Sliding window
+"max profit", "best so far"									Single pass, tracking a running best
+"top k", "most frequent"									Count dict, then sort or heap
 
 Step 3: Write the skeleton for that pattern. These go on your paper next to each pattern:
-
 
 # HASH MAP
 seen = {}
@@ -93,9 +93,11 @@ Step 4: Fill in the blanks by asking three questions:
 What do I add when r moves?
 When is the window or pair "bad", or "good enough"?
 What do I record, and where?
+
 Step 5: Edge cases. Check an empty input, a single item, all duplicates, and no answer.
 </p>
 <p>
+
 </p>
 ###########################################
 ###########################################
