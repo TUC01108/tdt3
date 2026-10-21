@@ -27,6 +27,135 @@ technical
 -->
 ###########################################
 ###########################################
+<h2>20/10/26</h2>
+================================================================================================
+<h3>Evening:</h3>
+<p>
+</p>
+<p>
+</p>
+================================================================================================
+<h3>Afternoon:</h3>
+<p> 
+</p>
+<p>
+</p>
+================================================================================================
+<h3>Morning:</h3>
+<p>
+Today is mock day. Do a quick round of one-liners, then go straight into a 70-minute mock.
+
+Warm-up: say each one out loud (about 30 seconds each). Be extra careful with the three Hards.
+
+Group Anagrams (Hard)
+Longest Substring Without Repeating (Hard)
+Min Size Subarray Sum (Hard)
+Move Zeroes
+Longest Common Prefix
+Top K Frequent
+Contains Duplicate II
+3Sum
+Container With Most Water
+
+Group Anagrams 						= hash map
+longest substring without repeating = sliding window
+min size subarry sum 				= sliding window
+move zeroes 						= two pointers
+longest common prefix 				= string scan and built-ins
+top k frequent 						= hash map
+contains duplicate II 				= hash map
+3sum 								= two pointers
+container with most water 			= two pointers
+
+Group Anagrams uses a hash map keyed by ''.join(sorted(word)). 
+Append each word to its key's list and return 
+list(my_dict.values()). It's O(n · k log k) time.
+one liner: Group Anagrams: a dict keyed by ''.join(sorted(word)), return the values
+
+Longest Substring is a sliding window with a set. While s[r] is 
+in seen, remove s[l] and move l right. Then add s[r] and take 
+max(best, r - l + 1). It's O(n) time.
+
+Min Size Subarray is a sliding window with a running total. Add 
+nums[r]. While total >= target, record r - l + 1, subtract 
+nums[l], and move l right. Return 0 if the best is still inf. 
+It's O(n) time and O(1) space.
+
+Move Zeroes: a slow pointer for the next non-zero spot, and watch the slow != i edge case on [1,0]
+
+Longest Common Prefix: scan columns on strs[0], and if len(word) <= i or word[i] != ch, return strs[0][:i]
+
+#Top K
+my_dict = {}
+for num in nums:
+	my_dict[num] = my_dict.get(num, 0) + 1
+return sorted(my_dict, key=my_dict.get, reverse=True)[:k]
+nlogn
+
+# Contains Duplicate II
+my_dict = {}
+for i , num in enumerate(nums):
+	if num in my_dict:
+		if i - my_dict[num] <= k:
+			return True
+	my_dict[num] = i
+return False
+
+#3Sum
+nums.sort()
+result = []
+for i in range(len(nums)):
+	if i>0 and nums[i] == nums[i-1]:
+		continue
+	l = i + 1
+	r = len(nums) - 1
+	while l < r:
+		total = nums[i] + nums[l] + nums[r]
+		if total < 0:
+			l += 1
+		elif total > 0:
+			r -= 1
+		else:
+			result.append([nums[i],nums[l],nums[r]])
+			l += 1
+			r -= 1
+			while l < r and nums[l] == nums[l-1]:
+				l += 1
+return result
+# IS THERE ANY WAY TO SHORTEN THIS ONE? so much to remember
+
+#container
+l = 0
+r = len(height) - 1
+best = 0
+while l < r:
+	low = 0
+	width = abs(l - r)
+	if height[l] < height[r]:
+		low = height[l]
+	else:
+		low = height[r]
+	if best < (low * width):
+		best = (low * width)
+	if height[l] < height[r]:
+		l += 1
+	else:
+		r -= 1
+return best
+# Any way to shorten this one too? its ok if no
+
+
+
+
+
+
+</p>
+<p>
+</p>
+<p>
+</p>
+###########################################
+###########################################
 <h2>19/10/26</h2>
 ================================================================================================
 <h3>Evening:</h3>
