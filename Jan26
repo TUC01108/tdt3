@@ -44,7 +44,36 @@ technical
 <h3>Morning:</h3>
 <p>
 Cold redo of group anagrams-
+whats the input- strs
+what am i returning- list of groups of words
+skeleton-
+seen = {}
+for i, x in enumerate(strs):
+	if target - x in seen:
+		return ...
+	seen[x] = i
+what do i add when i moves?
+add a word to the seen[key] when sorted version matches
+the problem is done when it sorts through the whole list
+you append to the values in each key.
+edge cases-... not worried about these just yet.
+
 cold redo of longest substring-
+whats the input- str
+what am i returning- longest substring of str
+skeleton-
+l = 0
+for r in range(len(s)):
+	<add s[r] to window>
+	while <window breaks the rule>:
+	<remove s[l]>
+	l += 1
+best = max(best, r-l+1)
+what do i add when r moves?
+you add s[r] to the window..?
+when is the window good enough?
+It's good enough when its made it to the end of the word.
+I record the substrings length in best variable as int.
 
 new problems on intervals:
 merge intervals
@@ -53,6 +82,92 @@ meeting rooms
 
 i feel like i missed some yesterday and maybe the day before so will
 check on that too.
+
+going to write the corrections here now:
+  input: strs
+- return: list of groups of words
++ return: list of lists, where each inner list holds words that are anagrams of each other
+  skeleton:
+  seen = {}
+- for i, x in enumerate(strs):     # you don't need the index here, so loop "for w in strs"
+-     if target - x in seen:       # that's Two Sum's check. There's no target here (interference again!)
+-         return ...               # no early return. You group EVERY word
+-     seen[x] = i
++ for w in strs:
++     key = ''.join(sorted(w))     # the sorted word is the key
++     # add w to the list stored at seen[key]
++ return list(seen.values())
+
+  input: str s
+- return: longest substring of str
++ return: the LENGTH (an int) of the longest substring with no repeating characters
+  l = 0
++ seen = set()                     # you'll need these two set up before the loop
++ best = 0
+  for r in range(len(s)):
+      <add s[r] to window>         # right, but do it AFTER the while (see below)
+      while <window breaks the rule>:
+          <remove s[l]>
+          l += 1
+-     best = max(best, r-l+1)      # indent this inside the for loop
+- good enough = made it to the end of the word
++ the window BREAKS the rule when s[r] is already in seen (a repeat)
++ so: while s[r] in seen, shrink. Then add s[r] and record best.
+
+walking through length of longest substring without repeats example
+"abcabcbb"
+returns 3 ("abc")
+
+l, best, count = 0, 0, {}
+for r in range(len(s)):
+	count[s[r]] = count.get(s[r], 0) + 1
+	while count[s[r]] > 1:
+		count[s[l]] -= 1
+		l += 1
+	best = max(best, r-l+1)
+return best
+
+so lets start in range(len(s))
+r = 0
+len(s) = 8
+	count[a] = 1
+	best = 1
+r = 1
+	count[b] = 1
+	best = 2
+r = 2
+	count[c] = 1
+	best = 3
+r = 3
+	count[a] = 2
+	count[a] = 1
+	l = 1
+	best = 3
+r = 4
+	count[b] = 2
+	count[b] = 1
+	l = 2
+	best = 3
+r = 5
+	count[c] = 2
+	count[c] = 1
+	l = 3
+	best = 3
+r = 6
+	count[b] = 2
+	count[a] = 0
+	l = 4
+	count[b] = 1
+	l = 5
+	best = 3
+r = 7
+	count[b] = 2
+	count[c] = 0
+	l = 6
+	count[b] = 1
+	l = 7
+	best = 3
+	
 
 </p>
 <p>
